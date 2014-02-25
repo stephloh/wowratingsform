@@ -1,0 +1,28 @@
+<h1>WOW Ratings List</h1>
+
+<table>
+  <tr>
+    <th>Rate</th>
+    <th>Date of Survey</th>
+    <th>Number of Survey Respondents</th>
+    <th>Number of Survey Participants</th>
+  </tr>
+
+<% @ratings.each do |rating| %>
+  <tr>
+    <td><%= rating.rate %></td>
+    <td><%= rating.survey_date %></td>
+    <td><%= rating.respondents %></td>
+    <td><%= rating.candidates %></td>
+
+
+    <td><%= link_to 'Show', rating %></td>
+    <td><%= link_to 'Edit', edit_rating_path(rating) %></td>
+    <td><%= link_to 'Destroy', rating, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rating', new_rating_path %>

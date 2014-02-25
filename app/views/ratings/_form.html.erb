@@ -1,0 +1,40 @@
+<%= form_for(@rating) do |f| %>
+  <% if @rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+      <% @rating.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :rate %><br />
+    <%= f.text_field :rate %>
+  </div>
+
+  <div class="field">
+    <br>Date of Survey</br>
+    <%= f.text_field :survey_date %>
+    <br>e.g. yyyy/mm/dd</br>
+  </div>
+
+  <div class="field">
+    <br>Number of Survey Participants</br>
+    <%= f.text_field :candidates %>
+  </div>
+
+  <div class="field">
+    <br>Number of Survey Respondents</br>
+    <%= f.text_field :respondents %>
+  </div>
+
+  <hr>
+  <div class="form-actions">
+    <%= f.submit "Submit" %>
+  </div>
+
+<% end %>

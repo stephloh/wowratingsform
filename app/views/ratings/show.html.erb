@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rate:</b>
+  <%= @rating.rate %>
+</p>
+<p>
+  <b>Date of Survey:</b>
+  <%= @rating.survey_date %>
+</p>
+<p>
+  <b>Number of Survey Candidates:</b>
+  <%= @rating.candidates %>
+</p>
+<p>
+  <b>Number of Survey Respondents:</b>
+  <%= @rating.respondents %>
+</p>
+
+
+<%= link_to 'Edit', edit_rating_path(@rating) %> |
+<%= link_to 'Back', ratings_path %>
