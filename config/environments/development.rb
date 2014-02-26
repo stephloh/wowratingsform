@@ -36,6 +36,6 @@ Wowform2::Application.configure do
   config.assets.debug = true
 
   # Required for Devise gem
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => 'http://pacific-mesa-8099.herokuapp.com' }
 
 end
