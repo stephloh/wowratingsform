@@ -2,17 +2,19 @@
 
 <table>
   <tr>
-    <th>Rate</th>
     <th>Date of Survey</th>
+    <th>Rating Given (%)</th>
+    <!-- <th>Date of Survey</th> -->
     <th>Number of Survey Respondents</th>
     <th>Number of Survey Participants</th>
   </tr>
 
 <% @ratings.each do |rating| %>
   <tr>
-    <td><%= rating.rate %></td>
     <td><%= rating.survey_date %></td>
-    <td><%= rating.respondents %></td>
+    <td><%= rating.rate %></td>
+<!--     <td><%= rating.survey_date %></td>
+ -->    <td><%= rating.respondents %></td>
     <td><%= rating.candidates %></td>
 
 

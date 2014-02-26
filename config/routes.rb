@@ -1,12 +1,11 @@
 Wowform2::Application.routes.draw do
 
 devise_for :users 
-#   root "users/new"
+# root :to "ratings#new"
 # end
+resources :ratings
 
-  resources :ratings
-
-  # root :to => 'ratings#new'
+root :to => 'ratings#index'
 
 
 
